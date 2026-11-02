@@ -1,0 +1,25 @@
+# 编译产物
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+*.lib
+snake
+
+# CMake
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# IDE
+.vs/
+.vscode/
+*.vcxproj*
+*.sln
+
+# 系统杂物
+.DS_Store
+Thumbs.db
