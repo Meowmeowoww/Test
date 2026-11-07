@@ -5,7 +5,7 @@
 
 一个用 C++17 写的终端版贪吃蛇，单文件、零第三方依赖，Windows / Linux / macOS 都能编译。
 
-![终端里的贪吃蛇：绿色身体追着红色食物](docs/screenshot.png)
+![终端里的贪吃蛇：绿色身体追着红色食物](https://izumikonata1231.cn/images/test-snake.png)
 
 ## 玩法
 
