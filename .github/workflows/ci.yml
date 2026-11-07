@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  unix:
+    name: ${{ matrix.os }} / g++
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: g++ -std=c++17 -O2 -Wall -Wextra -o snake snake.cpp
+
+      - name: Run self-test
+        run: ./snake --selftest
+
+  windows:
+    name: windows / MSVC
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Build
+        run: cl /nologo /std:c++17 /EHsc /O2 /utf-8 snake.cpp /Fe:snake.exe
+
+      - name: Run self-test
+        run: .\snake.exe --selftest

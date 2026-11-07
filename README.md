@@ -1,17 +1,11 @@
 # Test · 终端贪吃蛇
 
+[![CI](https://github.com/Meowmeowoww/Test/actions/workflows/ci.yml/badge.svg)](https://github.com/Meowmeowoww/Test/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-c8a06a.svg)](LICENSE)
+
 一个用 C++17 写的终端版贪吃蛇，单文件、零第三方依赖，Windows / Linux / macOS 都能编译。
 
-```
-  贪吃蛇    得分 0    长度 3
-  +----------------------------+
-  |                            |
-  |            ooo@            |
-  |                            |
-  |                  *         |
-  |                            |
-  +----------------------------+
-```
+![终端里的贪吃蛇：绿色身体追着红色食物](docs/screenshot.png)
 
 ## 玩法
 
